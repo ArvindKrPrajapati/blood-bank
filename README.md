@@ -1,6 +1,6 @@
-external library used in this project is jQuery to color the card green after selecting group or number of bottles 
+1. External library used in this project is jQuery to color the card green after selecting group or number of bottles 
 
-2 Angular Material is also being used to design the UI
+2. Angular Material is also being used to design the UI
 
  clone this project using (git clone https://github.com/ArvindKrPrajapati/blood-bank-project) command or download the project 
 
