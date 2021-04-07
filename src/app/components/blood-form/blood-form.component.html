@@ -1,0 +1,64 @@
+ <div class="main">
+   <mat-card class="form">
+     <h3>Enter Blood Bank <br>Records</h3>
+     <form #bloodForm="ngForm" (ngSubmit)="saveRecords()">
+       <label>A+</label>
+      <select name="A+"  [(ngModel)]="count[0]">
+        <option *ngFor="let num of [].constructor(10); let i=index" [value]="i+1">
+          {{i+1}}
+         </option>
+        </select>
+        <br>
+       <label>B+</label>
+      <select name="B+"  [(ngModel)]="count[1]">
+        <option *ngFor="let num of [].constructor(10); let i=index" [value]="i+1">
+          {{i+1}}
+         </option>
+        </select>
+        <br>
+       <label>o+</label>
+      <select  name="o+"  [(ngModel)]="count[2]">
+        <option *ngFor="let num of [].constructor(10); let i=index" [value]="i+1">
+          {{i+1}}
+         </option>
+        </select>
+        <br>
+       <label>AB+</label>
+      <select name="AB+"  [(ngModel)]="count[3]">
+        <option *ngFor="let num of [].constructor(10); let i=index" [value]="i+1">
+          {{i+1}}
+         </option>
+        </select>
+        <br>
+       <label>A-</label>
+      <select name="A-"  [(ngModel)]="count[4]">
+        <option *ngFor="let num of [].constructor(10); let i=index" [value]="i+1">
+          {{i+1}}
+         </option>
+        </select>
+        <br>
+       <label>B-</label>
+      <select name="B-"  [(ngModel)]="count[5]" >
+        <option *ngFor="let num of [].constructor(10); let i=index" [value]="i+1">
+          {{i+1}}
+         </option>
+        </select>
+        <br>
+       <label>o-</label>
+      <select name="o-"  [(ngModel)]="count[6]">
+        <option *ngFor="let num of [].constructor(10); let i=index" [value]="i+1">
+          {{i+1}}
+         </option>
+        </select>
+        <br>
+       <label>AB-</label>
+      <select name="AB-"  [(ngModel)]="count[7]" >
+        <option *ngFor="let num of [].constructor(10); let i=index" [value]="i+1">
+          {{i+1}}
+         </option>
+        </select>
+        <br><br>
+    <button type="submit"  mat-raised-button color="warn">go to blood bank</button> </form>
+   </mat-card>
+ </div>
+

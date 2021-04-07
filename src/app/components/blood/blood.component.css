@@ -1,0 +1,130 @@
+
+.alert{
+  position: fixed;
+  bottom:0px;
+  background:black;
+  color:white;
+  z-index:200;
+  left:0px;
+  margin:10px;
+}
+ #reset{
+   color:tomato;
+ }
+.main {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 10px;
+}
+
+ .gg{
+  grid-template-columns: 1fr 1fr;
+}
+
+.blood-box {
+  position: relative;
+  z-index: 100;
+  margin: auto;
+  width: 180px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+}
+.blood-group,.blood-count {
+  background: gainsboro;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 540;
+  padding-top: 35px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  border: 1px solid silver;
+}
+
+.blood-count {
+  width: 50px;
+  background: skyblue;
+  border: 1px solid dodgerblue;
+}
+
+.grid2 {
+  grid-template-columns: repeat(2,1fr);
+}
+
+.form-card {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 10px;
+}
+
+.label {
+  background: pink;
+  border-radius: 5px;
+  padding: 8px;
+  font-weight: 540;
+}
+.input select {
+  background: white;
+  width: 70%;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+select:focus {
+  outline: none;
+}
+.center{
+  margin-left:47%;
+}
+.bucket-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 300px;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.bucket-text {
+  font-weight: 350;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+@media screen and (max-width:600px) {
+  .main {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+  .form-card {
+    width: 90%;
+  }
+  .input select {
+    width: 95%;
+  }
+  .blood-box {
+    width: 130px;
+    grid-template-columns: 80px 30px;
+  }
+
+  .blood-group {
+    width: 80px;
+    height: 80px;
+    padding-top: 25px;
+  }
+  .blood-count {
+    width: 40px;
+    height: 80px;
+    padding-top: 25px;
+  }
+}

@@ -1,0 +1,78 @@
+<h2>Blood Banks</h2>
+<div class="main" cdkDropList (cdkDropListDropped)="drop($event)">
+  <mat-card class="blood-box makeDarkGreen_{{blood.id}}" cdkDrag [cdkDragDisabled]="isDragDisabled" *ngFor="let blood of bloodBanks; let i =index" [ngStyle]="green.indexOf(blood.id)!=-1 ? {'background':'lightgreen'} : {'background':'white'}  ">
+    <div class="blood-group">
+      {{blood.group}}
+    </div>
+    <div class="blood-count">
+      {{blood.count}}
+    </div>
+  </mat-card>
+</div>
+
+<br><br>
+
+<section class="main grid2">
+  <div class="form">
+    <h2>Requirement Form</h2>
+    <mat-card class="form-card">
+      <div class="label">
+        Blood Required
+      </div>
+      <div class="input">
+        <form>
+          <select name="selectedBlood" [disabled]="allowSelectGroup" [(ngModel)]="selected" (ngModelChange)="removeDisabled()">
+            <option *ngFor="let b of bloodBanks let i =index" [value]="i">
+              {{b.group}}
+            </option>
+          </select>
+        </form>
+      </div>
+      <div class="label">
+        Number of Bottles
+      </div>
+      <div class="input">
+        <form #myForm2="ngForm">
+          <select name="selectedCount" [disabled]="allowCountSelect" [(ngModel)]="numberOfBottle" (ngModelChange)="check()">
+            <option *ngFor="let count of [].constructor(9) let i=index" [value]="i+1">
+              {{i+1}}
+            </option>
+          </select>
+        </form>
+      </div>
+
+    </mat-card>
+  </div>
+
+
+  <div class="bucket">
+    <h2>Bucket</h2>
+    <mat-card class="bucket-card" >
+<div class="main gg">
+  <mat-card class="blood-box center"  *ngFor="let blood of exam; let i =index" [style.background]=" 'green' ">
+    <div class="blood-group">
+      {{blood.group}}
+    </div>
+    <div class="blood-count">
+      {{blood.count}}
+    </div>
+  </mat-card>
+  </div>
+    </mat-card>
+  </div>
+</section>
+<br>
+
+<mat-card class="alert" *ngIf="alert">
+  <table width="100%">
+    <tr>
+      <td>
+Thank you for choosing blood from our blood bank
+
+      </td>
+      <td width="40px">
+        <button mat-button id="reset"  (click)="totalReset()">Reset</button>
+      </td>
+    </tr>
+  </table>
+  </mat-card>
